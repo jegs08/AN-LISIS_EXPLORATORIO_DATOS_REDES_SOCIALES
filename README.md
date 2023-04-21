@@ -1,5 +1,6 @@
 <div align="center">
-  <h1>Manipulación y Análisis de datos con Pandas y Python</h1>
+  <h1>EDA para la elabroación de un Modelo predictivo de clasificación del riesgo de sufrir depresión en usuarios de redes sociales </h1>
+  <h2>Manipulación y Análisis de datos con Pandas y Python</h2>
 </div>
 
 <div align="center"> 
