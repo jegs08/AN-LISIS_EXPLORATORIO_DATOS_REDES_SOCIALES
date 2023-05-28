@@ -28,8 +28,8 @@ Pandas es la librería de software libre para manipulación de datos con Python 
 - [Resumen](#Resumen)
 - [I. Introducción](#Introducción)
 - [II. Definición del problema](#Definición-del-problema)
-  - [A. Usuarios de redes sociales](#A-.-Usuarios-de-redes-sociales)
-  - [B. Transtornos depresivos]
+  - [A. Usuarios de redes sociales](#Usuarios-de-redes-sociales)
+  - [B. Transtornos depresivos](#Transtornos-depresivos)
 - [III. Trabajos relacionados](#Trabajos-relacionados)
   - [A. Social Media and Depresdion Symptoms: A Network Perspective]
   - [B. Metodología de Análisis de Emociones para Identificar Riesgo de Cometer Suicidio Generado por el COVID-19]
@@ -77,14 +77,14 @@ Se tomará un conjunto de datos basado en las respuestas dadas por usuarios de r
 
 ## Definición del problema
 
-### A.Usuarios de redes sociales
+### Usuarios de redes sociales
 
 Si bien hay diversos conjuntos de datos disponibles para analizar a los usuarios con tendencia a depresión, se les ha estado generalizando sin considerar a fondo las características de cada uno.
 Una evaluación recurrente es la del procesamiento del lenguaje natural (NLP) y el aprendizaje automático, para lo cual se transforma los datos de texto no estructurado, como comentarios de usuarios en redes sociales, en datos numéricos estructurados.
 Sin embargo, extraer información de personas con el fin de rastrear la depresión es una desventaja evaluarlo de la manera descrita, puesto a que se trata a todos los involucrados como si tuvieran el mismo perfil.
 Ante ello se opta por encuesta realizada a cada individuo, en el cual se cuantifica del 0 al 100 los sentimientos de este, y así, en base al análisis de estos determinar si tiene tendencia a la depresión.
 
-### B.Transtornos depresivos
+### Transtornos depresivos
 
 Frente a un episodio depresivo la persona presenta dificultades en diversos ámbitos de su vida incluyendo su entorno social, y puede expresarlo a través de las redes sociales, ya sea con algún comentario no tan comprometedor, o realizando publicaciones recurrentes que den a notar su sentir depresivo.
 Los tipos de episodios depresivos pueden ser leves, moderados o graves, en función de los síntomas que tenga la persona.
