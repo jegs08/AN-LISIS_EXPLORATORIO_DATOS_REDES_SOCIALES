@@ -26,20 +26,20 @@ Pandas es la librería de software libre para manipulación de datos con Python 
 
 ## Tabla de contenido
 - [Resumen](#Resumen)
-- [I. Introducción](#I.Introducción)
-- [II. Definición del problema](#II.Definición-del-problema)
-  - [A. Usuarios de redes sociales]
+- [I. Introducción](#Introducción)
+- [II. Definición del problema](#Definición-del-problema)
+  - [A. Usuarios de redes sociales](#A.-Usuarios-de-redes-sociales)
   - [B. Transtornos depresivos]
-- [III. Trabajos relacionados](#III.Trabajos-relacionados)
+- [III. Trabajos relacionados](#Trabajos-relacionados)
   - [A. Social Media and Depresdion Symptoms: A Network Perspective]
   - [B. Metodología de Análisis de Emociones para Identificar Riesgo de Cometer Suicidio Generado por el COVID-19]
   - [C. Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19: Estudio observacional]
-- [IV. Propuesta de Data Product](#IV.Propuesta-de-Data-Product)
+- [IV. Propuesta de Data Product](#Propuesta-de-Data-Product)
   - [A. Set de datos]
   - [B. Modelamiento y/o análisis]
-- [V. Beneficios](#V.Beneficios)
-- [VI. Plan de proyecto](#VI.Plan-de-proyecto)
-- [VII. Análisis de datos](#VII.Análisis-de-datos)
+- [V. Beneficios](#Beneficios)
+- [VI. Plan de proyecto](#Plan-de-proyecto)
+- [VII. Análisis de datos](#Análisis-de-datos)
   - [A. Limpieza de datos]
   - [B. Análisis univariante]
     - [Categórico]
@@ -54,7 +54,7 @@ Pandas es la librería de software libre para manipulación de datos con Python 
   - [H. Experimentación]
     - [Sin balanceo]
     - [Con balanceo]
-- [VIII. Referencias](#VIII.Referencias)
+- [VIII. Referencias](#Referencias)
 
 ## Resumen
 
@@ -62,7 +62,7 @@ Este documento presenta el análisis exploratorio de un dataset resultante de en
 
 **Palabras claves—Modelo predictivo, procesamiento de datos, depresión, redes sociales, salud mental**
 
-## I.Introducción
+## Introducción
 
 Las redes sociales han llegado a ser parte de la vida de las personas, ya que con ellas se ha obtenido una herramienta para fomentar la cercanía entre ellas, ya sea por intereses en común o para expresar opiniones.
 Hasta enero de 2022 se sabe que entre las redes sociales con mayor interacción están Facebook con 2 900 millones de usuarios, e Instagram con 1 478 millones de usuarios, asimismo se prevé un crecimiento de usuarios de Twiter hasta el 2025, siendo estas redes sociales donde se publican diversos comentarios.
@@ -75,22 +75,22 @@ Hasta enero de 2022 se sabe que entre las redes sociales con mayor interacción 
 
 Se tomará un conjunto de datos basado en las respuestas dadas por usuarios de redes sociales, durante catorce días, en donde cuantificaba su estado de ánimo de 0 a 100, con la determinación de realizar hallazgos sobre los sentimientos que resultan predictores a un posible riesgo de sufrir depresión.
 
-## II.Definición del problema
+## Definición del problema
 
-### A. Usuarios de redes sociales
+### A.Usuarios de redes sociales
 
 Si bien hay diversos conjuntos de datos disponibles para analizar a los usuarios con tendencia a depresión, se les ha estado generalizando sin considerar a fondo las características de cada uno.
 Una evaluación recurrente es la del procesamiento del lenguaje natural (NLP) y el aprendizaje automático, para lo cual se transforma los datos de texto no estructurado, como comentarios de usuarios en redes sociales, en datos numéricos estructurados.
 Sin embargo, extraer información de personas con el fin de rastrear la depresión es una desventaja evaluarlo de la manera descrita, puesto a que se trata a todos los involucrados como si tuvieran el mismo perfil.
 Ante ello se opta por encuesta realizada a cada individuo, en el cual se cuantifica del 0 al 100 los sentimientos de este, y así, en base al análisis de estos determinar si tiene tendencia a la depresión.
 
-### B. Transtornos depresivos
+### B.Transtornos depresivos
 
 Frente a un episodio depresivo la persona presenta dificultades en diversos ámbitos de su vida incluyendo su entorno social, y puede expresarlo a través de las redes sociales, ya sea con algún comentario no tan comprometedor, o realizando publicaciones recurrentes que den a notar su sentir depresivo.
 Los tipos de episodios depresivos pueden ser leves, moderados o graves, en función de los síntomas que tenga la persona.
 Entre los trastornos del estado de ánimo se encuentran los que se dan una sola vez, los recurrentes y los bipolares que tienen episodios eufóricos e irritables. Tomando en consideración los diversos estados de ánimo que puede tener una persona, se busca a través de la encuesta medirlos para llegar a una conclusión más acertada.
 
-## III.Trabajos relacionados
+## Trabajos relacionados
 
 Utilizaremos un datasets de meteoritos de la NASA llamado [Meteorite Landings](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh) para estudiar **tipos de variables**, **estructuras de dataframes**, **borrar y copiar información de dataframes**.
 
