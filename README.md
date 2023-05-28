@@ -25,7 +25,7 @@ Pandas es la librería de software libre para manipulación de datos con Python 
 
 
 ## Tabla de contenido
-- [Resumen]
+- [Resumen](#Comenzando con pandas)
 - [I. Introducción]
 - [II. Definición del problema]
   - [A. Usuarios de redes sociales]
