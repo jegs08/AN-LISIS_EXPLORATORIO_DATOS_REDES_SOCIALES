@@ -19,51 +19,42 @@ Pandas es la librería de software libre para manipulación de datos con Python 
 - Comprender el significado y uso de los DataFrames en Ciencia de Datos.
 - Usar Computational Tools de Pandas para realizar cálculos básicos.
 - Trabajar con Statisticals tools.
-- Hacer preprocesamiento de datos para crear modelos. 
-- Extraer información de Data Sets usando Time Series y Date Functionality.
+- Hacer preprocesamiento de datos para crea un modelo predictivo por desarrollar podría detectar de manera oportuna si una persona es depresiva, tomando en consideración el sentimiento de soledad, estrés, falta de concentración, fatiga, además del uso de redes sociales. 
+- Extraer información del Data Set realizada a usuarios de redes sociales durante catorce días para fines prácticos.
+- Abrir camino a que la persona encuestada pueda optar por ayuda profesional, e incluso realizar más estudios sobre el nivel de depresión que se encuentra para una pronta ayuda idónea.
+
 
 ## Tabla de contenido
-- [Comenzando con pandas](#Comenzando-con-pandas)
-  - [¿Qué es pandas?](#¿Qué-es-pandas?)
-  - [Configurando Google Colab](#Configurando-Google-Colab)
-  - [Series e Indexación y selección de datos](#Series-e-Indexación-y-selección-de-datos)
-  - [DataFrames](#DataFrames)
-  - [Indexado y manejo de archivos CSV](#Indexado-y-manejo-de-archivos-CSV)
-  - [Conexión con bases de datos tipo SQL](#Conexión-con-bases-de-datos-tipo-SQL)
-  - [Diferentes formatos para datasets](#Diferentes-formatos-para-datasets)
-- [Funcionalidades básicas y esenciales de pandas](#Funcionalidades-básicas-y-esenciales-de-pandas)
-  - [Formatos de lectura para cargar y guardar DataFrames](#Formatos-de-lectura-para-cargar-y-guardar-DataFrames)
-  - [Meteorite Landings Dataset](#Meteorite-Landings-Dataset)
-    - [Tipos de Variables que componen un data frame](#Tipos-de-variables-que-componen-un-data-frame)
-    - [Estructuras de dataframes en detalle](#Estructuras-de-dataframes-en-detalle)
-    - [Borrar filas, columnas y copiar información](#Borrar-filas-columnas-y-copiar-información)
-- [Aplicando pandas](#Aplicando-pandas)
-  - [London bike sharing dataset](#London-bike-sharing-dataset)
-    - [Funciones matemáticas](#Funciones-matemáticas)
-    - [Funciones más complejas y lambdas](#Funciones-más-complejas-y-lambdas)
-  - [Population dataset](#Population-dataset)
-    - [Múltiples índices](#Múltiples-índices)
-  - [Datasets propios](#Datasets-propios)
-    - [Como trabajar con variables de tipo texto en Pandas](#Como-trabajar-con-variables-de-tipo-texto-en-Pandas)
-    - [Concatenación de DataFrames, concat y append](#Concatenación-de-DataFrames,-concat-y-append)
-    - [Merge de DataFrames](#Merge-de-DataFrames)
-    - [Lidiar con datos faltantes en DataFrames](#Lidiar-con-datos-faltantes-en-DataFrames)
-    - [Cómo lidiar con datos duplicados en Pandas](#Cómo-lidiar-con-datos-duplicados-en-Pandas)
-  - [Diamond dataset](#Diamond-dataset)
-    - [Group by](#Group-by)
-  - [Tips dataset](#Tips-dataset)
-    - [Group by - Refozando su uso](#Group-by---Refozando-su-uso)
-    - [Group by - extraer valor con variables categóricas](#Group-by---extraer-valor-con-variables-categóricas)
-    - [Tablas dinámicas con Pivot Table](#Tablas-dinámicas-con-Pivot-Table)
-  - [COVID-19 dataset](#COVID-19-dataset)
-    - [Series de Tiempo](#Series-de-Tiempo)
-    - [Series de Tiempo - variables nulas](#Series-de-Tiempo---variables-nulas)
-    - [Visualización y graficación de datos](#Visualización-y-graficación-de-datos)
-- [Proyecto - Cambio climático](#Proyecto---Cambio-climático)
-  - [Iniciando una rutina típica de manejo de datos](#Iniciando-una-rutina-típica-de-manejo-de-datos)
-  - [Preprocesamiento de datos - terminando de preparar y limpiar los datasets](#Preprocesamiento-de-datos---terminando-de-preparar-y-limpiar-los-datasets)
-  - [Análisis de datos](#Análisis-de-datos)
-
+- [Resumen]
+- [I. Introducción]
+- [II. Definición del problema]
+  - [A. Usuarios de redes sociales]
+  - [B. Transtornos depresivos]
+- [III. Trabajos relacionados]
+  - [A. Social Media and Depresdion Symptoms: A Network Perspective]
+  - [B. Metodología de Análisis de Emociones para Identificar Riesgo de Cometer Suicidio Generado por el COVID-19]
+  - [C. Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19: Estudio observacional]
+- [IV. Propuesta de Data Product]
+  - [A. Set de datos]
+  - [B. Modelamiento y/o análisis]
+- [V. Beneficios]
+- [VI. Plan de proyecto]
+- [VII. Análisis de datos]
+  - [A. Limpieza de datos]
+  - [B. Análisis univariante]
+    - [Categórico]
+    - [Numérico]
+  - [C. Análisis multivariante]
+  - [D. Eliminación de Outliers]
+  - [E. Matriz de Correlación]
+    - [Categórica]
+    - [Numérica]
+  - [F. Codificación de variables]
+  - [G. Escalamiento de variables]
+  - [H. Experimentación]
+    - [Sin balanceo]
+    - [Con balanceo]
+- [VIII. Referencias] 
 
 ## Comenzando con pandas
 ### ¿Qué es pandas?
