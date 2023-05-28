@@ -81,7 +81,7 @@ Hasta enero de 2022 se sabe que entre las redes sociales con mayor interacción 
 
 <div align="center"> 
   <img src="readme_img/fig_1.png" width="">
-  *<p>Fig. 1.	Resultados del estudio Global Burden of Disease (GBD) de 2019 referente a la depresión.</p>*
+  <p><i>Fig. 1.	Resultados del estudio Global Burden of Disease (GBD) de 2019 referente a la depresión.</i></p>
 </div>
 
 ### Formatos de lectura para cargar y guardar DataFrames
