@@ -62,18 +62,7 @@ Este documento presenta el análisis exploratorio de un dataset resultante de en
 
 **Palabras claves—Modelo predictivo, procesamiento de datos, depresión, redes sociales, salud mental**
 
-### Configurando Google Colab
-
-[Notebook de contenido](https://github.com/francomanca93/analisis-de-datos/blob/comienzo/1-Comenzando-con-pandas/1_Configurando_Google.ipynb)
-
-
-En esta sección se ve como configurar **Google Colaboratoty**, tambien se trabaja con operaciones básicas, variables, listas y numpy para experimentar con Colab. 
-
-**Colab** el cuál se basa en los cuadernos de Jupyter Notebook, por lo tanto la forma de trabajar es muy similar. 
-
-**Google Colab** te brinda una maquina virtual con 100 GB y 12 GB de RAM, estas especificaciones te permiten ejecutar codigos mas complejos en la nube. Ademas colab viene con la mayoria de librerias para el uso en ciencia de datos y machine learning.
-
-## Introducción
+## I. Introducción
 
 Las redes sociales han llegado a ser parte de la vida de las personas, ya que con ellas se ha obtenido una herramienta para fomentar la cercanía entre ellas, ya sea por intereses en común o para expresar opiniones.
 Hasta enero de 2022 se sabe que entre las redes sociales con mayor interacción están Facebook con 2 900 millones de usuarios, e Instagram con 1 478 millones de usuarios, asimismo se prevé un crecimiento de usuarios de Twiter hasta el 2025, siendo estas redes sociales donde se publican diversos comentarios.
@@ -84,23 +73,24 @@ Hasta enero de 2022 se sabe que entre las redes sociales con mayor interacción 
   <p><i>Fig. 1.	Resultados del estudio Global Burden of Disease (GBD) de 2019 referente a la depresión.</i></p>
 </div>
 
-### Formatos de lectura para cargar y guardar DataFrames
+Se tomará un conjunto de datos basado en las respuestas dadas por usuarios de redes sociales, durante catorce días, en donde cuantificaba su estado de ánimo de 0 a 100, con la determinación de realizar hallazgos sobre los sentimientos que resultan predictores a un posible riesgo de sufrir depresión.
 
-En este notebook estudiamos sobre diversos formatos de almacenamiento de datos y cómo elegir el formato eficiente que se adapte a nuestras necesidades.
+## II. Definición del problema
 
-En la clase se preparo un [script para generar un DataFrame](https://github.com/francomanca93/analisis-de-datos/blob/funcionalidades-basicas/2-Funcionalidades-basicas-de-pandas/3_1_Save_Load_formats.ipynb) de mas de **100 mil registros** y **30 columnas** (las primeras 15 con formato numérico,las restantes tipo texto).
+### A. Usuarios de redes sociales
 
-Conclusiones:
+Si bien hay diversos conjuntos de datos disponibles para analizar a los usuarios con tendencia a depresión, se les ha estado generalizando sin considerar a fondo las características de cada uno.
+Una evaluación recurrente es la del procesamiento del lenguaje natural (NLP) y el aprendizaje automático, para lo cual se transforma los datos de texto no estructurado, como comentarios de usuarios en redes sociales, en datos numéricos estructurados.
+Sin embargo, extraer información de personas con el fin de rastrear la depresión es una desventaja evaluarlo de la manera descrita, puesto a que se trata a todos los involucrados como si tuvieran el mismo perfil.
+Ante ello se opta por encuesta realizada a cada individuo, en el cual se cuantifica del 0 al 100 los sentimientos de este, y así, en base al análisis de estos determinar si tiene tendencia a la depresión.
 
-**CSV y formatos String** : Son simples, requieren alto costo computacional y algo lentos.
+### B. Transtornos depresivos
 
-**HDF** : Gran soporte, adecuado para grandes cantidades de datos, rápido a costo de alto costo computacional.
+Frente a un episodio depresivo la persona presenta dificultades en diversos ámbitos de su vida incluyendo su entorno social, y puede expresarlo a través de las redes sociales, ya sea con algún comentario no tan comprometedor, o realizando publicaciones recurrentes que den a notar su sentir depresivo.
+Los tipos de episodios depresivos pueden ser leves, moderados o graves, en función de los síntomas que tenga la persona.
+Entre los trastornos del estado de ánimo se encuentran los que se dan una sola vez, los recurrentes y los bipolares que tienen episodios eufóricos e irritables. Tomando en consideración los diversos estados de ánimo que puede tener una persona, se busca a través de la encuesta medirlos para llegar a una conclusión más acertada.
 
-**Parquet** : Puede igualar a hdf e inclusive trabajar por chunks y en paralelo.
-
-**Pickle** : Es práctico pero lento con grandes cantidades de datos.
-
-## Meteorite Landings Dataset
+## III. Trabajos relacionados
 
 Utilizaremos un datasets de meteoritos de la NASA llamado [Meteorite Landings](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh) para estudiar **tipos de variables**, **estructuras de dataframes**, **borrar y copiar información de dataframes**.
 
