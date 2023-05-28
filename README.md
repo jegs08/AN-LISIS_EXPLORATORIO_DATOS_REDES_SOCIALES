@@ -26,20 +26,20 @@ Pandas es la librería de software libre para manipulación de datos con Python 
 
 ## Tabla de contenido
 - [Resumen](#Resumen)
-- [I. Introducción]
-- [II. Definición del problema]
+- [I. Introducción](#Introducción)
+- [II. Definición del problema](#Definición-del-problema)
   - [A. Usuarios de redes sociales]
   - [B. Transtornos depresivos]
-- [III. Trabajos relacionados]
+- [III. Trabajos relacionados](#Trabajos-relacionados)
   - [A. Social Media and Depresdion Symptoms: A Network Perspective]
   - [B. Metodología de Análisis de Emociones para Identificar Riesgo de Cometer Suicidio Generado por el COVID-19]
   - [C. Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19: Estudio observacional]
-- [IV. Propuesta de Data Product]
+- [IV. Propuesta de Data Product](#Propuesta-de-Data-Product)
   - [A. Set de datos]
   - [B. Modelamiento y/o análisis]
-- [V. Beneficios]
-- [VI. Plan de proyecto]
-- [VII. Análisis de datos]
+- [V. Beneficios](#Beneficios)
+- [VI. Plan de proyecto](#Plan-de-proyecto)
+- [VII. Análisis de datos](#Análisis de datos)
   - [A. Limpieza de datos]
   - [B. Análisis univariante]
     - [Categórico]
@@ -54,7 +54,7 @@ Pandas es la librería de software libre para manipulación de datos con Python 
   - [H. Experimentación]
     - [Sin balanceo]
     - [Con balanceo]
-- [VIII. Referencias] 
+- [VIII. Referencias](#Referencias)
 
 ## Resumen
 ### ¿Qué es pandas?
