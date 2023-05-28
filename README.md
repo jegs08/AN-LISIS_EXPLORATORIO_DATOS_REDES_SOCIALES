@@ -16,7 +16,7 @@ Pandas es la librería de software libre para manipulación de datos con Python 
 ## Objetivos del documento
 
 - Ejecutar operaciones básicas de Pandas.
-- Comprender el significado y uso de los DataFrames en Ciencia de Datos.
+- Comprender el significado y uso de los DataFrames en Análisis de Datos e Ciencia de Datos.
 - Usar Computational Tools de Pandas para realizar cálculos básicos.
 - Trabajar con Statisticals tools.
 - Hacer preprocesamiento de datos para crea un modelo predictivo por desarrollar podría detectar de manera oportuna si una persona es depresiva, tomando en consideración el sentimiento de soledad, estrés, falta de concentración, fatiga, además del uso de redes sociales. 
@@ -57,6 +57,11 @@ Pandas es la librería de software libre para manipulación de datos con Python 
 - [VIII. Referencias](#Referencias)
 
 ## Resumen
+
+Este documento presenta el análisis exploratorio de un dataset resultante de encuesta realizada a usuarios de redes sociales durante catorce días, con la intención de identificar hallazgos importantes en relación al riesgo de sufrir depresión, luego de limpiar y clasificar la data en mención.
+
+**Palabras claves—Modelo predictivo, procesamiento de datos, depresión, redes sociales, salud mental**
+
 ### ¿Qué es pandas?
 
 [Pandas](https://pandas.pydata.org/) es una herramienta de análisis y manipulación de datos de código abierto rápida, potente, flexible y fácil de usar, construida sobre Python.
