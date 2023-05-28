@@ -28,7 +28,7 @@ Pandas es la librería de software libre para manipulación de datos con Python 
 - [Resumen](#Resumen)
 - [I. Introducción](#Introducción)
 - [II. Definición del problema](#Definición-del-problema)
-  - [A. Usuarios de redes sociales](#A.-Usuarios-de-redes-sociales)
+  - [A. Usuarios de redes sociales](#A-.-Usuarios-de-redes-sociales)
   - [B. Transtornos depresivos]
 - [III. Trabajos relacionados](#Trabajos-relacionados)
   - [A. Social Media and Depresdion Symptoms: A Network Perspective]
