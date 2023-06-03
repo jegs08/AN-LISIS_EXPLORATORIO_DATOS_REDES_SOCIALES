@@ -376,7 +376,7 @@ sns.displot(redes_df1['LowMood'], kind="kde")
 ```
 
 <div align="center">
-<img id ="foto" src="readme_img/fig_20.png" width="800px" height="800px"/>
+<img id ="foto" src="readme_img/fig_ 20.png" width="800px" height="800px"/>
 </div>
 
 ```python
