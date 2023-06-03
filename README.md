@@ -189,7 +189,7 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 
 ### Limpieza de datos
 
-<div>
+<div align="center">
 <img id ="foto" src="readme_img/fig_ 3.png" width="800px" height="800px"/>
 
 <img id ="foto2" src="readme_img/fig_ 4.png" width="800px" height="800px" />
