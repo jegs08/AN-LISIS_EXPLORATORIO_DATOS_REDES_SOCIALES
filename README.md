@@ -719,11 +719,62 @@ redes_sc_df
 
 ### Experimentación
 
+```python
+# División de la data
+x=redes_sc_df.drop([target],axis = 1)
+y=redes_sc_df[target]
+
+X_train, X_test, y_train, y_test = train_test_split(x,y,train_size = 0.80,random_state = 2022)
+X_train
+```
+
 <div align="center"> 
   <img src="readme_img/fig_15.png" width="800px" height="100px">
 </div>
 
+
+```python
+# Librerías para el entrenamiento sin balanceo y con balanceo
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import classification_report,confusion_matrix,accuracy_score
+```
+
 #### Sin balanceo
+
+```python
+#@title Algoritmos
+def analizar_modelo(X_train, X_test, y_train, y_test, model):
+    LABELS= ["No Deprimido","Deprimido"]
+    plot_frecuencia(X_train, y_train)
+    model.fit(X_train, y_train)
+    pred_y = model.predict(X_test)
+    conf_matrix = confusion_matrix(y_test, pred_y)
+    plt.figure(figsize=(5, 5))
+    sns.heatmap(conf_matrix, xticklabels=LABELS, yticklabels=LABELS, annot=True, fmt="d");
+    plt.title("Confusion matrix")
+    plt.ylabel('True class')
+    plt.xlabel('Predicted class')
+    plt.show()   
+    print(classification_report(y_test, pred_y))
+
+
+
+from collections import Counter
+def plot_frecuencia(X, y):
+  X= X.values
+  y = y.values
+
+  pd.Series(Counter(y)).plot(kind='bar')
+  plt.show()
+  unique, count = np.unique(y, return_counts=True)
+  print ("Distribution de muestras resampling {}".format(Counter(y)))
+```
+
+```python
+modelo = RandomForestClassifier(n_estimators=100, max_depth = 5, max_leaf_nodes=15)
+analizar_modelo(X_train, X_test, y_train, y_test, modelo)
+```
 
 <div align="center">
 <img id ="foto" src="readme_img/fig_16.png" width="800px" height="400px"/>
@@ -734,9 +785,61 @@ redes_sc_df
 
 #### Con balanceo
 
+> *OJO: EN ESTE PROYECTO SE OPTÓ POR USAR EL RANDOM OVER SAMPLER YA QUE ES EL QUE NOS DIO MEJORES RESULTADOS, sin embargo coloco el código de los demás métodos para que puedan escoger cuál es el que más se adecue a su proyecto.*
+
+> *Método Random Under Sampler* 
+
+```python
+from imblearn.under_sampling import ClusterCentroids
+cc = ClusterCentroids(random_state=1234)
+X_train_r, y_train_r = cc.fit_resample(X_train, y_train)
+analizar_modelo(X_train_r, X_test, y_train_r, y_test, modelo)
+```
+
+> *Método Random Over Sampler*
+
+```python
+# @title Sobre muestreo ingenuo
+from imblearn.over_sampling import RandomOverSampler
+ros =  RandomOverSampler(random_state = 1234)
+X_train_r, y_train_r = ros.fit_resample(X_train, y_train)
+analizar_modelo(X_train_r, X_test, y_train_r, y_test, modelo)
+```
+
 <div align="center">
 <img id ="foto" src="readme_img/fig_18.png" width="800px" height="400px"/>
 </div>
 <div align="center">
 <img id ="foto" src="readme_img/fig_19.png" width="800px" height="800px"/>
 </div>
+
+> *SMOTE*
+
+```python
+# @title SMOTE
+from imblearn.over_sampling import SMOTE
+sm = SMOTE()
+X_train_r, y_train_r = sm.fit_resample(X_train, y_train)
+analizar_modelo(X_train_r, X_test, y_train_r, y_test, modelo)
+```
+
+> *SMOTE + Tomek*
+
+```python
+# @title SMOTE+Tomek
+from imblearn.combine import SMOTETomek
+smt = SMOTETomek()
+X_train_r, y_train_r = smt.fit_resample(X_train, y_train)
+analizar_modelo(X_train_r, X_test, y_train_r, y_test, modelo)
+```
+
+> *ADASYN*
+
+```python
+# @title ADASYN
+from imblearn.over_sampling import ADASYN
+ada = ADASYN()
+X_train_r, y_train_r = ada.fit_resample(X_train, y_train)
+analizar_modelo(X_train_r, X_test, y_train_r, y_test, modelo)
+```
+
