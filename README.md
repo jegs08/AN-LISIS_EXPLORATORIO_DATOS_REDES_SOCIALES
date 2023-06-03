@@ -295,7 +295,7 @@ target
 ### Limpieza de datos
 
 ```python
-# Función de visualización de los valores faltantes
+#@title Función de visualización de los valores faltantes
 import matplotlib.pyplot as plt
 import seaborn as sns
 import missingno
@@ -364,11 +364,40 @@ def report_missings(data, opt = 0):
 # Se hace llamado a la función
 report_missings(redes_df1)
 ```
-> Al hacer el llamado, genera la siguiente imagen:
+> *Al hacer el llamado, genera la siguiente imagen:*
 
 <div align="center">
 <img id ="foto" src="readme_img/fig_ 3.png" width="800px" height="800px"/>
+</div>
 
+```python
+# Se observa la distribución de los datos para "LowMood"
+sns.displot(redes_df1['LowMood'], kind="kde")
+```
+
+<div align="center">
+<img id ="foto" src="readme_img/fig_20.png" width="800px" height="800px"/>
+</div>
+
+```python
+# Nuestro método de imputación será la eliminación de las filas que tengan los valores NaN, ya que en la mayoría de las variables forman parte del 0.5 % aprox.
+redes_df2 = redes_df1.copy()
+redes_df3 = redes_df2.dropna()
+redes_df3
+```
+
+```python
+# Notamos que la cantidad de datos nulos en cero.
+data_rep = round(redes_df3.isna().sum().sort_values(ascending=False)/len(redes_df3)*100, 2)
+data_rep
+```
+> *Se vuelve a hacer el llamado a la función de visualización para poder ver que ya no existen valores nulos*
+
+```python
+report_missings(redes_df3)
+```
+
+<div align="center">
 <img id ="foto2" src="readme_img/fig_ 4.png" width="800px" height="800px" />
 </div>
 
