@@ -138,7 +138,7 @@ Las variables de estudio a considerar son:
 Teniendo en consideración las variables (numéricas) de estudio anteriormente mencionadas, se elabora un tipo de algoritmo supervisado, usando un modelo de clasificación, puesto a que finalmente se trabaja con una variable categórica.
 
 Para la variable categórica se realiza el uso de la siguiente fórmula:
-```sh
+```python
 DeprRate = -0,025 + 0,31 Loneliness + 0,25 Inferior + 0,19 Concentrat + 0,15 Stress + 0,06 Fatigue
 ```
 En donde involucra cinco de las variables numéricas, con el fin de calcular el índice de depresión (variable categórica).
