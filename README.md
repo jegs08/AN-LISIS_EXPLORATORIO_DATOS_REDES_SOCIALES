@@ -205,7 +205,7 @@ warnings.filterwarnings('ignore')
 
 ```python
 ### IMPORTACION DE LA DATA ####
-redes = pd.read_csv("/content/drive/MyDrive/PYTHON-ANALISIS DE DATOS-DSRP/OSF_socialmedia_data.csv", index_col = 0)
+redes = pd.read_csv("RUTA DONDE SE GUARDA EL ARCHIVO/OSF_socialmedia_data.csv", index_col = 0)
 redes= redes.reset_index(drop = True)
 redes
 ```
