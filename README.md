@@ -233,13 +233,13 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 #### Categórica
 
 <div align="center"> 
-  <img src="readme_img/fig_11.png" width="1000px" height="500px">
+  <img src="readme_img/fig_11.png" width="1000px" height="800px">
 </div>
 
 #### Numérica
 
 <div align="center"> 
-  <img src="readme_img/fig_12.png" width="1000px" height="500px">
+  <img src="readme_img/fig_12.png" width="1000px" height="600px">
 </div>
 
 ### Codificación de variables
