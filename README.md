@@ -119,7 +119,7 @@ Los datos elegidos para realizar el análisis son las respuestas a una encuesta 
 
 
 Las variables de estudio a considerar son:
-```sh
+
 1. Variables relacionadas al uso de redes sociales:
  - [x] Uso activo de redes sociales – ASMU
  - [x] Uso pasivo de redes sociales – PSMU
@@ -133,7 +133,7 @@ Las variables de estudio a considerar son:
  - [x]	Sentimiento de soledad – Loneliness
  - [x]	Sensación de fatiga – Fatigue
  - [x]	Bajo estado de ánimo - LowMood
-```
+
 ### Modelamiento y/o análisis
 
 Teniendo en consideración las variables (numéricas) de estudio anteriormente mencionadas, se elabora un tipo de algoritmo supervisado, usando un modelo de clasificación, puesto a que finalmente se trabaja con una variable categórica.
@@ -142,6 +142,18 @@ Para la variable categórica se realiza el uso de la siguiente fórmula:
 ```sh
 DeprRate = -0,025 + 0,31 Loneliness + 0,25 Inferior + 0,19 Concentrat + 0,15 Stress + 0,06 Fatigue
 ```
+En donde involucra cinco de las variables numéricas, con el fin de calcular el índice de depresión (variable categórica).
+Para la realización de la clasificación de la variable categórica, se considera como base la escala de Hamilton [5], en donde considera la puntuación de 0 a 52, clasificando de la siguiente manera:
+
+- No deprimido: 0-7
+- Depresión ligera/menor: 8-13
+- Depresión moderada: 14-18
+- Depresión severa: 19-22
+- Depresión muy severa: >23
+
+En base a esa escala se hace la clasificación de deprimido y no deprimido en una primera instancia.
+También se realiza la correlación de esta variable categórica con las variables numéricas: Loneliness, stress, y news.
+
 
 ### Tipos de Variables que componen un data frame
 
