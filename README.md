@@ -92,7 +92,7 @@ Entre los trastornos del estado de ánimo se encuentran los que se dan una sola 
 
 ## Trabajos relacionados
 
-### Social Media and Depresdion Symptoms: A Network Perspective
+### Social Media and Depresion Symptoms: A Network Perspective
 
 Destaca su enfoque en el uso pasivo de las redes sociales, como lo es desplazarse por las noticias en las redes sociales, y cómo esto se relaciona con los síntomas de depresión.
 
