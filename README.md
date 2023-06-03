@@ -260,7 +260,7 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
   <img src="readme_img/fig_15.png" width="1000px" height="100px">
 </div>
 
-#### Sin balabceo
+#### Sin balanceo
 
 <div align="center">
 <img id ="foto" src="readme_img/fig_16.png" width="1000px" height="600px"/>
