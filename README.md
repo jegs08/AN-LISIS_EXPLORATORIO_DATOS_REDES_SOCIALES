@@ -160,7 +160,7 @@ El modelo predictivo por desarrollar podría detectar de manera oportuna si una 
 ## Plan de proyecto
 
 El plan del proyecto se realizará con la metodología CRISP-DM, del cual se adaptará para que se pueda centrar más en los datos que en el “negocio”. 
-En la <span style="color:red"> *primera fase* </span> se realiza el análisis del contexto, enfocándose en el propósito de realizar un modelo para predecir depresión en usuarios de redes sociales. 
+En la *primera fase* se realiza el análisis del contexto, enfocándose en el propósito de realizar un modelo para predecir depresión en usuarios de redes sociales.\n 
 Para esta primera fase, en el presente documento ya se plantea la problemática y el plan preliminar para alcanzar dicho propósito.
 Se consideran dos días para avanzar con esta primera fase, teniendo en consideración la recopilación de la data que se procesa.
 En la *segunda fase* se realiza el entendimiento de los datos, detectando que la data se tiene clasificar y limpiar antes de realizar el procesamiento para el entrenamiento del modelo predictivo.
