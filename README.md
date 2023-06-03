@@ -192,7 +192,7 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 from google.colab import drive
 drive.mount('/content/drive')
 ```
-> *OJO: Antes de ejecutar o luego de la ejecución del código de conexión entre Google Colab y el Drive personal, se tiene que importar dentro del Drive personal el archivo **"OSF_socialmedia_data.csv"** con el que se va trabajar, ubicado en la raíz de este respositorio.*
+> *IMPORTANTE: Antes de ejecutar o luego de la ejecución del código de conexión entre Google Colab y el Drive personal, se tiene que importar dentro del Drive personal el archivo **"OSF_socialmedia_data.csv"** con el que se va trabajar, ubicado en la raíz de este respositorio.*
 
 ```python
 import numpy as np
@@ -208,6 +208,88 @@ warnings.filterwarnings('ignore')
 redes = pd.read_csv("/content/drive/MyDrive/PYTHON-ANALISIS DE DATOS-DSRP/OSF_socialmedia_data.csv", index_col = 0)
 redes= redes.reset_index(drop = True)
 redes
+```
+
+```python
+# Conteo de la data
+print(f"Hay {redes.shape[0]:,} filas.")
+print(f"Hay {redes.shape[1]:,} variables.")
+print(f"Hay {redes['Participant'].unique().size} participantes.")
+```
+
+```python
+# Información de la data
+redes.info()
+```
+
+```python
+# Convertir la columna Date a formato dato
+redes['Date']= pd.to_datetime(redes['Date'])
+redes.head()
+```
+
+```python
+# Agregación de la columna DrepRate y IndDep
+redes = redes.rename(columns={'Active':'ASMU'}) # USO ACTIVO DE LAS REDES SOCIALES
+redes = redes.rename(columns={'DeprMood':'LowMood'}) # ESTADO DE ÁNIMO BAJO
+redes['Participant'] = redes['Participant'].astype('object')
+
+var_totales = list(redes.select_dtypes(include=['object','datetime','float64','int64']).columns)
+var_totales.append('DrepRate')
+var_totales
+df = np.array((-0.025+0.31*redes['Loneliness']+0.25*redes['Inferior']+0.19*redes['Concentrat']+0.15*redes['Stress']+0.06*redes['Fatigue'])).round(2)
+rate = pd.DataFrame(df,columns=['DrepRate'])
+prueba= redes.copy()
+prueba = pd.concat([prueba, rate], axis = 1,ignore_index = True)
+prueba.columns=var_totales
+prueba.reset_index(drop = True)
+prueba
+condition = np.where(prueba['DrepRate']>11.58, 'Deprimido', 'No Deprimido')
+condition_1 = pd.DataFrame(condition,columns=['IndDep'])
+prueba_1= prueba.copy()
+prueba_1 = pd.concat([prueba_1, condition_1], axis = 1,ignore_index = True)
+var_totales.append('IndDep')
+prueba_1.columns=var_totales
+prueba_1.reset_index(drop = True)
+prueba_1
+```
+> *Aquí se habla de las encuestas que fueron respondidas (1) y de las que no (0). Se está ubicando las que si fueron respondidas para luego poder eliminar las que no fueron respondidas.*
+
+```python
+# La variable Responded nos indica con 1 si fue respondido y 0 que no fueron respondidos
+prueba_1['Responded'].unique()
+```
+
+```python
+# Eliminamos las filas con 0 ya que no fueron respondidas y no podremos analizar los valores de lás demás variables
+responde = prueba_1['Responded']==0
+filtro = prueba_1.loc[responde].index
+redes_df = prueba_1.drop(filtro)
+# Formularios respondidos
+redes_df
+```
+
+```python
+### ELIMINAR COLUMNAS INNECESARIAS ###
+redes_df1 = redes_df.copy()
+redes_df1.drop(columns = ['Date','Time','Instr_DQs','Session.Name','Notification.No','LifePak.Download.No','Responded','Completed.Session','Session.Instance','Session.Instance.Response.Lapse','Reminders.Delivered','AutoPSMU','DrepRate'], axis=1, inplace=True)
+```
+
+```python
+### SEPARAR COLUMNAS POR TIPO DE VARIABLE ###
+
+# Variables categóricas
+var_categoricas = list(redes_df1.select_dtypes(include=['object']).columns)
+var_categoricas.pop(2)
+var_categoricas
+
+# Variables numéricas
+var_numericas = list(redes_df1.drop('LowMood', axis = 1).select_dtypes(exclude=['object','datetime']).columns)
+var_numericas
+
+# Target u objetivo a alcanzar
+target = "IndDep"
+target
 ```
 
 ### Limpieza de datos
