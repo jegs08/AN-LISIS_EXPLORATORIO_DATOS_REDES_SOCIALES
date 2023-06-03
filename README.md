@@ -216,10 +216,10 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 ### Análisis multivariante
 
 <div align="center">
-<img id ="foto" src="readme_img/fig_8.png" width="1000px" height="500px"/>
+<img id ="foto" src="readme_img/fig_8.png" width="1000px" height="600px"/>
 </div>
 <div align="center">
-<img id ="foto" src="readme_img/fig_9.png" width="1000px" height="200px"/>
+<img id ="foto" src="readme_img/fig_9.png" width="1000px" height="400px"/>
 </div>
 
 ### Eliminación de Outliers
