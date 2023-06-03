@@ -44,9 +44,9 @@ Pandas es la librería de software libre para manipulación de datos con Python 
   - [B. Análisis univariante](#Análisis-univariante)
     - [Categórico](#Categórico)
     - [Numérico](#Numérico)
-  - [C. Análisis multivariante]
-  - [D. Eliminación de Outliers]
-  - [E. Matriz de Correlación]
+  - [C. Análisis multivariante](#Análisis-multivariante)
+  - [D. Eliminación de Outliers](#Eliminación-de-Outliers)
+  - [E. Matriz de Correlación](#Matriz-de-Correlación)
     - [Categórica]
     - [Numérica]
   - [F. Codificación de variables]
@@ -212,6 +212,33 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 <div align="center">
 <img id ="foto" src="readme_img/fig_7.png" width="1000px" height="500px"/>
 </div>
+
+### Análisis multivariante
+
+<div align="center">
+<img id ="foto" src="readme_img/fig_8.png" width="1000px" height="1000px"/>
+</div>
+<div align="center">
+<img id ="foto" src="readme_img/fig_9.png" width="1000px" height="500px"/>
+</div>
+
+### Eliminación de Outliers
+
+<div align="center"> 
+  <img src="readme_img/fig_10.png" width="1000px" height="500px">
+</div>
+
+### Matriz de Correlación
+
+#### Categórica
+
+
+
+#### Numérica
+
+
+
+### 
 
 ### Tipos de Variables que componen un data frame
 
