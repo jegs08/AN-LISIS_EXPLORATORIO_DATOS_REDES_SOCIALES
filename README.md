@@ -266,7 +266,7 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 <img id ="foto" src="readme_img/fig_16.png" width="1000px" height="600px"/>
 </div>
 <div align="center">
-<img id ="foto" src="readme_img/fig_17.png" width="1000px" height="400px"/>
+<img id ="foto" src="readme_img/fig_17.png" width="1000px" height="600px"/>
 </div>
 
 #### Con balanceo
@@ -275,7 +275,7 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 <img id ="foto" src="readme_img/fig_18.png" width="1000px" height="600px"/>
 </div>
 <div align="center">
-<img id ="foto" src="readme_img/fig_19.png" width="1000px" height="400px"/>
+<img id ="foto" src="readme_img/fig_19.png" width="1000px" height="600px"/>
 </div>
 
 
