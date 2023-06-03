@@ -36,7 +36,7 @@ Pandas es la librería de software libre para manipulación de datos con Python 
   - [C. Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19: Estudio observacional](#Monitoreo-de-las-tendencias-de-depresión-en-Twiter-durante-la-pandemia-de-COVID-19-Estudio-observacional)
 - [IV. Propuesta de Data Product](#Propuesta-de-Data-Product)
   - [A. Set de datos](#Set-de-datos)
-  - [B. Modelamiento y/o análisis](#Modelamiento-y/o-análisis)
+  - [B. Modelamiento y/o análisis](#Modelamiento-y-análisis)
 - [V. Beneficios](#Beneficios)
 - [VI. Plan de proyecto](#Plan-de-proyecto)
 - [VII. Análisis de datos](#Análisis-de-datos)
@@ -134,7 +134,7 @@ Las variables de estudio a considerar son:
  - [x]	Sensación de fatiga – Fatigue
  - [x]	Bajo estado de ánimo - LowMood
 
-### Modelamiento y/o análisis
+### Modelamiento y análisis
 
 Teniendo en consideración las variables (numéricas) de estudio anteriormente mencionadas, se elabora un tipo de algoritmo supervisado, usando un modelo de clasificación, puesto a que finalmente se trabaja con una variable categórica.
 
@@ -145,11 +145,11 @@ DeprRate = -0,025 + 0,31 Loneliness + 0,25 Inferior + 0,19 Concentrat + 0,15 Str
 En donde involucra cinco de las variables numéricas, con el fin de calcular el índice de depresión (variable categórica).
 Para la realización de la clasificación de la variable categórica, se considera como base la escala de Hamilton [5], en donde considera la puntuación de 0 a 52, clasificando de la siguiente manera:
 
-- No deprimido: 0-7
-- Depresión ligera/menor: 8-13
-- Depresión moderada: 14-18
-- Depresión severa: 19-22
-- Depresión muy severa: >23
+- [x] No deprimido: 0-7
+- [x] Depresión ligera/menor: 8-13
+- [x] Depresión moderada: 14-18
+- [x] Depresión severa: 19-22
+- [x] Depresión muy severa: >23
 
 En base a esa escala se hace la clasificación de deprimido y no deprimido en una primera instancia.
 También se realiza la correlación de esta variable categórica con las variables numéricas: Loneliness, stress, y news.
