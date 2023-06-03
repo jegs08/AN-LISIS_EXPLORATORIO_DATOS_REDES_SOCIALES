@@ -257,7 +257,7 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 ### Experimentación
 
 <div align="center"> 
-  <img src="readme_img/fig_15.png" width="1000px" height="500px">
+  <img src="readme_img/fig_15.png" width="1000px" height="200px">
 </div>
 
 #### Sin balabceo
