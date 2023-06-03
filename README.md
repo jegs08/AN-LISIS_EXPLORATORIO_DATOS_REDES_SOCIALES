@@ -294,6 +294,72 @@ target
 
 ### Limpieza de datos
 
+```python
+#@title Función de visualización de los valores faltantes
+import matplotlib.pyplot as plt
+import seaborn as sns
+import missingno
+def report_missings(data, opt = 0):
+  """
+  data = dataframe
+  opt = opcion de graficar {0: todo, >0 solo faltantes}
+        default= 0
+  """
+  data_rep = round(data.isna().sum().sort_values(ascending=False)/len(data)*100, 3)
+  data_rep2 = data.isna().sum().sort_values(ascending=False)
+  df = pd.concat([data_rep2, data_rep], axis=1).reset_index()
+  df.columns = ["Variable", "Cant. Nulos", "% Nulos"]
+  df["Cant. No Nulos"] = len(data) - df["Cant. Nulos"]
+  df = df.reindex(columns=["Variable","Cant. No Nulos","Cant. Nulos","% Nulos"])
+    
+  print("*"*100)
+  print("*"*20, "Reporte General", "*"*20)
+  print("*"*100)
+  print(df)
+  
+  if opt:
+    data_rep = data_rep[data_rep > 0] # opcional
+  miss = data_rep.to_frame()
+  miss.columns = ['Cantidad (%)']
+  miss.index.names = ['Variable']
+  miss['Variable'] = miss.index
+
+  fig = plt.figure(figsize=(15,15))
+  #plot the missing value count
+  #plt.figure(figsize=(10,6))
+  ax1 = fig.add_subplot(3,2,1)
+  print("*"*70, "Graficas de datos faltantes", "*"*70)
+  print("*"*180)
+  missingno.bar(data, figsize=(10,5), fontsize=12, ax=ax1, color="dodgerblue");
+  plt.title("Conteo de muestras para cada variable (porcentaje y cantidad)")
+
+  ax3 = fig.add_subplot(3,2,3)
+  sns.heatmap(data.isna().transpose(),
+            cmap="YlGnBu",
+            cbar_kws={'label': 'Valores perdidos'})
+  plt.title("Distribución de valores perdidos")
+  plt.tight_layout()
+
+
+  ax2 = fig.add_subplot(3,2,2)
+  #sns.set(style="whitegrid", color_codes=True)
+  sns.barplot(x = 'Variable', y = 'Cantidad (%)', data=miss, ax=ax2)
+  plt.title("Porcentaje de datos faltantes por variable")
+  plt.xticks(rotation = 90)
+  #plt.savefig("missing1.png", dpi=100)
+  
+  
+
+  ax4 = fig.add_subplot(3,2,4)
+  missingno.heatmap(data, cmap="RdYlGn", figsize=(10,5), fontsize=12, ax=ax4)
+  plt.title("Correlación de nulidad entre variables")
+  ax5 = fig.add_subplot(3,2,5)
+  missingno.dendrogram(data, figsize=(10,5), fontsize=12,ax=ax5)
+  plt.title("Dendograma basado en la correlación de valores faltantes")
+  plt.tight_layout()
+
+```
+
 <div align="center">
 <img id ="foto" src="readme_img/fig_ 3.png" width="800px" height="800px"/>
 
