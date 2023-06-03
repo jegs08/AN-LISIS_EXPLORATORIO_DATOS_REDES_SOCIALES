@@ -254,6 +254,21 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
   <img src="readme_img/fig_14.png" width="1000px" height="500px">
 </div>
 
+### Experimientación
+
+<div align="center"> 
+  <img src="readme_img/fig_15.png" width="1000px" height="500px">
+</div>
+
+#### Sin balabceo
+
+
+
+#### Con balanceo
+
+
+
+
 ### Tipos de Variables que componen un data frame
 
 [Notebook del contenido](https://github.com/francomanca93/analisis-de-datos/blob/funcionalidades-basicas/2-Funcionalidades-basicas-de-pandas/7_Tipos_de_datos.ipynb)
