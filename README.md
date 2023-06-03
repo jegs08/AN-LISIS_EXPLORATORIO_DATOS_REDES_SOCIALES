@@ -295,7 +295,7 @@ target
 ### Limpieza de datos
 
 ```python
-#@title Función de visualización de los valores faltantes
+# Función de visualización de los valores faltantes
 import matplotlib.pyplot as plt
 import seaborn as sns
 import missingno
@@ -359,6 +359,12 @@ def report_missings(data, opt = 0):
   plt.tight_layout()
 
 ```
+
+```python
+# Se hace llamado a la función
+report_missings(redes_df1)
+```
+> Al hacer el llamado, genera la siguiente imagen:
 
 <div align="center">
 <img id ="foto" src="readme_img/fig_ 3.png" width="800px" height="800px"/>
