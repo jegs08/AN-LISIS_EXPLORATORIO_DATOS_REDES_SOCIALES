@@ -485,7 +485,39 @@ pd.crosstab(redes_df4['Participant'],redes_df4['IndDep']).plot(kind='bar',linest
 <p><i>Fig. 3</i></p>
 </div>
 
+```python
+# Tablas extras para entender mejor la data
+data = pd.crosstab(redes_df4['Participant'],redes_df4['Day'])
+data
+```
+
+```python
+data = pd.crosstab(redes_df4['Participant'],redes_df4['IndDep'])
+data
+```
 ### Análisis multivariante
+```python
+#@title Respecto a la variable objetivo
+f, axes = plt.subplots(nrows=4, ncols=3, figsize=(25,15))
+
+sns.boxplot(x="IndDep", y="Fatigue", data=redes_df4, ax=axes[0,0])
+sns.boxplot(x="IndDep", y="Loneliness", data=redes_df4, ax=axes[0,1])
+sns.boxplot(x="IndDep", y="Concentrat", data=redes_df4, ax=axes[0,2])
+sns.boxplot(x="IndDep", y="LossOfInt", data=redes_df4, ax=axes[1,0])
+sns.boxplot(x="IndDep", y="Inferior", data=redes_df4, ax=axes[1,1])
+sns.boxplot(x="IndDep", y="Hopeless", data=redes_df4, ax=axes[1,2])
+sns.boxplot(x="IndDep", y="Stress", data=redes_df4, ax=axes[2,0])
+sns.boxplot(x="IndDep", y="PSMU", data=redes_df4, ax=axes[2,1])
+sns.boxplot(x="IndDep", y="News", data=redes_df4, ax=axes[2,2])
+sns.boxplot(x="IndDep", y="ASMU", data=redes_df4, ax=axes[3,0])
+sns.boxplot(x="IndDep", y="LowMood", data=redes_df4, ax=axes[3,1])
+
+df_frequency=pd.concat([redes_df4['Stress'],redes_df4['News'],redes_df4['Loneliness'],redes_df4['LowMood'],redes_df4['IndDep']],axis=1)
+fig,ax=plt.subplots(ncols=3,figsize=(20,5))
+sns.scatterplot(data=df_frequency,y="Loneliness",x="Stress",hue="IndDep",ax=ax[0])
+sns.scatterplot(data=df_frequency,y="Loneliness",x="News",hue="IndDep",ax=ax[1])
+sns.scatterplot(data=df_frequency,y="Loneliness",x="LowMood",hue="IndDep",ax=ax[2])
+```
 
 <div align="center">
 <img id ="foto" src="readme_img/fig_8.png" width="800" height="400px"/>
@@ -496,8 +528,37 @@ pd.crosstab(redes_df4['Participant'],redes_df4['IndDep']).plot(kind='bar',linest
 
 ### Eliminación de Outliers
 
+```python
+# Generar gráfica para visualizar los outliers
+boxplot = redes_df4.boxplot(figsize=(20,5))
+```
+>*OJO: Ejecutar este código genera la primera gráfica de la Fig 4*
+
+```python
+# Hallando el RIC para todo las variables
+
+for var in redes_df4.drop(columns=var_total).columns.values:
+  Q1 = np.percentile(redes_df4[var],25,interpolation = "midpoint")
+  Q3 = np.percentile(redes_df4[var],75,interpolation = "midpoint")
+
+  RIC = Q3-Q1
+
+  superior = np.where(redes_df4[var]>= (Q3+1.5*RIC))
+  inferior = np.where(redes_df4[var]<= (Q1-1.5*RIC))
+
+  redes_df5 = redes_df4.drop(superior[0])
+  redes_df5 = redes_df5.drop(inferior[0])
+```
+
+```python
+# Generar gráfica para visualizar que se eliminaron los outliers
+boxplot = redes_df5.boxplot(figsize=(20,5))
+```
+>*OJO: Ejecutar este código genera la segunda gráfica de la Fig 4*
+
 <div align="center"> 
   <img src="readme_img/fig_10.png" width="800px" height="300px">
+  <p><i>Fig. 4</i></p>
 </div>
 
 ### Matriz de Correlación
