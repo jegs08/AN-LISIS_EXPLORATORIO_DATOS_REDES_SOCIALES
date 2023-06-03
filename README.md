@@ -49,7 +49,7 @@ Pandas es la librería de software libre para manipulación de datos con Python 
   - [E. Matriz de Correlación](#Matriz-de-Correlación)
     - [Categórica](#Categórica)
     - [Numérica](#Numérica)
-  - [F. Codificación de variables](Codificacion-de-variables)
+  - [F. Codificación de variables](#Codificación-de-variables)
   - [G. Escalamiento de variables](#Escalamiento-de-variables)
   - [H. Experimentación](#Experimentación)
     - [Sin balanceo](#Sin-balanceo)
@@ -242,7 +242,7 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
   <img src="readme_img/fig_12.png" width="1000px" height="600px">
 </div>
 
-### Codificacion de variables
+### Codificación de variables
 
 <div align="center"> 
   <img src="readme_img/fig_13.png" width="1000px" height="500px">
