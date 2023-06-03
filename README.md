@@ -105,7 +105,7 @@ Su objetivo es proponer y evaluar una nueva metodología tomando como fundamento
 Basado en un método de búsqueda de expresiones regulares de usuarios identificados con depresión, creando un clasificado de texto psicológico consiguiendo, como se visualiza en “Fig. 2”, perfiles lingüísticos de los Tweets de usuarios depresivos y no depresivos.
 
 <div align="center"> 
-  <img src="readme_img/fig_2.png" width="">
+  <img src="readme_img/fig_ 2.png" width="">
   <p><i>Fig. 2.	Perfiles lingüísticos de los Tweets depresivos y no depresivos.</i></p>
 </div>
 
