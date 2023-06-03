@@ -232,13 +232,27 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 
 #### Categórica
 
-
+<div align="center"> 
+  <img src="readme_img/fig_11.png" width="1000px" height="500px">
+</div>
 
 #### Numérica
 
+<div align="center"> 
+  <img src="readme_img/fig_12.png" width="1000px" height="500px">
+</div>
 
+### Codificación de variables
 
-### 
+<div align="center"> 
+  <img src="readme_img/fig_13.png" width="1000px" height="500px">
+</div>
+
+### Escalamiento de variables
+
+<div align="center"> 
+  <img src="readme_img/fig_14.png" width="1000px" height="500px">
+</div>
 
 ### Tipos de Variables que componen un data frame
 
