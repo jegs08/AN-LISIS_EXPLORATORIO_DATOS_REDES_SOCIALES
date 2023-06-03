@@ -187,7 +187,7 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 
 ## Análisis de datos
 
-```sh
+```
 ### IMPORTACION DE LIBRERIAS NECESARIAS PARA REALIZAR EL PROYECTO ####
 from google.colab import drive
 drive.mount('/content/drive')
