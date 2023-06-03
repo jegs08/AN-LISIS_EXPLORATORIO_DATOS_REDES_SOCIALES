@@ -160,6 +160,7 @@ El modelo predictivo por desarrollar podría detectar de manera oportuna si una 
 ## Plan de proyecto
 
 El plan del proyecto se realizará con la metodología CRISP-DM, del cual se adaptará para que se pueda centrar más en los datos que en el “negocio”. 
+
 En la *primera fase* se realiza el análisis del contexto, enfocándose en el propósito de realizar un modelo para predecir depresión en usuarios de redes sociales.
 Para esta primera fase, en el presente documento ya se plantea la problemática y el plan preliminar para alcanzar dicho propósito.
 Se consideran dos días para avanzar con esta primera fase, teniendo en consideración la recopilación de la data que se procesa.
@@ -184,6 +185,17 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 - [x] Data Scientist, quien será el encargado de analizar los datos precisos para el análisis predictivo según el propósito definido.
 - [x]	Data Engineer, quien se encargará de la extracción, transformación y carga de los datos a evaluar con el modelado que se desarrolle.
 - [x]	Especialista en salud mental, quien dará los conocimientos de las variables a considerar en la evaluación de una persona depresiva enfocada en el contexto de usuario de redes sociales.
+
+## Análisis de datos
+
+### Limpieza de datos
+
+<div>
+<img id ="foto" src="readme_img/fig_3.png" width="20px" height="30px"/>
+
+<img id ="foto2" src="readme_img/fig_4.png" width="20px" height="30px" />
+</div>
+
 
 ### Tipos de Variables que componen un data frame
 
