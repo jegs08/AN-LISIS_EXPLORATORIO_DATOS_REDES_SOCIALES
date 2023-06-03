@@ -121,7 +121,7 @@ Los datos elegidos para realizar el análisis son las respuestas a una encuesta 
 Las variables de estudio a considerar son:
 
 1. Variables relacionadas al uso de redes sociales:
- - [![x] Uso activo de redes sociales – ASMU
+ - [x] Uso activo de redes sociales – ASMU
  - [x] Uso pasivo de redes sociales – PSMU
  - [x] Consulta de noticias - News
 2. Variables relacionadas a la depresión:
@@ -160,21 +160,25 @@ El modelo predictivo por desarrollar podría detectar de manera oportuna si una 
 ## Plan de proyecto
 
 El plan del proyecto se realizará con la metodología CRISP-DM, del cual se adaptará para que se pueda centrar más en los datos que en el “negocio”. 
-En la *primera fase* se realiza el análisis del contexto, enfocándose en el propósito de realizar un modelo para predecir depresión en usuarios de redes sociales. 
+En la <span style="color:red"> *primera fase* </span> se realiza el análisis del contexto, enfocándose en el propósito de realizar un modelo para predecir depresión en usuarios de redes sociales. 
 Para esta primera fase, en el presente documento ya se plantea la problemática y el plan preliminar para alcanzar dicho propósito.
 Se consideran dos días para avanzar con esta primera fase, teniendo en consideración la recopilación de la data que se procesa.
-En la segunda fase se realiza el entendimiento de los datos, detectando que la data se tiene clasificar y limpiar antes de realizar el procesamiento para el entrenamiento del modelo predictivo.
+En la *segunda fase* se realiza el entendimiento de los datos, detectando que la data se tiene clasificar y limpiar antes de realizar el procesamiento para el entrenamiento del modelo predictivo.
 Esta segunda fase puede llevar 1 semanas aproximadamente, considerando diferentes fuentes de datos de distintas redes sociales. 
 Una de las herramientas que ya se puede ir usando desde esta fase es Python, Colab, que ayuda mucho en la limpieza de datos y su procesamiento.
-En la tercera fase se realiza la preparación de los datos, en donde se incluye actividades como selección de atributos, así como la transformación y limpieza de los datos para el posterior modelado.
+En la *tercera fase* se realiza la preparación de los datos, en donde se incluye actividades como selección de atributos, así como la transformación y limpieza de los datos para el posterior modelado.
 En esta tercera fase, puede tomar 1 semana debido a la cantidad de datos a procesar y atributos de clasificación que se ha de considerar.
-En la cuarta fase se procede con el modelamiento, el cual puede llegar a ser varios modelados si se tiende a separar la data según red social de origen. Normalmente cuando se realiza este modelado puede que se tenga que volver a la fase de preparación de datos con el fin de volverlo lo más robusto posible.
+En la *cuarta fase* se procede con el modelamiento, el cual puede llegar a ser varios modelados si se tiende a separar la data según red social de origen. Normalmente cuando se realiza este modelado puede que se tenga que volver a la fase de preparación de datos con el fin de volverlo lo más robusto posible.
 Llegada a esta fase puede extenderse a 4 semanas mientras se va mejorando el modelado.
-En la quinta fase se continúa con la evaluación, en donde ya se tiene construido el modelo que se estimada que ha alcanzado la calidad necesaria para el análisis de los datos puestos a evaluación.
+En la *quinta fase* se continúa con la evaluación, en donde ya se tiene construido el modelo que se estimada que ha alcanzado la calidad necesaria para el análisis de los datos puestos a evaluación.
 Esta penúltima fase se puede en una semana, teniendo en cuenta que ya hay un modelo definido para la evaluación de los datos.
-Y en la sexta fase se finaliza con el despliegue, que se tomará como la presentación del modelo para que pueda ser usado en la evaluación de nuevos datos con atributos similares de los que se ha basado para realizarlo.
+Y en la *sexta fase* se finaliza con el despliegue, que se tomará como la presentación del modelo para que pueda ser usado en la evaluación de nuevos datos con atributos similares de los que se ha basado para realizarlo.
+
 Respecto a los recursos y perfiles, para este proyecto se necesitará los siguientes:
 
+- [x] Data Scientist, quien será el encargado de analizar los datos precisos para el análisis predictivo según el propósito definido.
+- [x]	Data Engineer, quien se encargará de la extracción, transformación y carga de los datos a evaluar con el modelado que se desarrolle.
+- [x]	Especialista en salud mental, quien dará los conocimientos de las variables a considerar en la evaluación de una persona depresiva enfocada en el contexto de usuario de redes sociales.
 
 ### Tipos de Variables que componen un data frame
 
