@@ -9,7 +9,7 @@
 
 ## Introducción al documento
 
-El contenido de este documento son **apuntes teoricos y prácticos** y un proyecto de **ANÁLISIS EXPLORATORIO DE DATOS** para **USUARIO DE REDES SOCIALES** del Curso de **Python para el Análisis de datos** y busca ser una guía para futuros trabajos personales. El mismo está dictado por Edwin Escobedo, Data Scientist del team [Data Science Research Perú](https://www.datascience.pe/).
+El contenido de este documento son **apuntes teoricos y prácticos** y un proyecto de **ANÁLISIS EXPLORATORIO DE DATOS** para **USUARIO DE REDES SOCIALES** del Curso de **Python para el Análisis de datos** (Realizado en **Google Colab**) y busca ser una guía para futuros trabajos personales. El mismo está dictado por Edwin Escobedo, Data Scientist del team [Data Science Research Perú](https://www.datascience.pe/).
 
 Pandas es la librería de software libre para manipulación de datos con Python más usada. Manipula grandes sets de datos numéricos, tablas y series de tiempo. Trabaja con múltiples formatos de archivos de datos como csv o xls.
 
@@ -187,17 +187,28 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 
 ## Análisis de datos
 
+> OJO: Antes de ejecutar el código de conexión entre Google Colab y el Drive personal, se tiene que ubicar dentro del Drive personal el archivo "" con el que se va trabajar
+
 ```python
 ### IMPORTACION DE LIBRERIAS NECESARIAS PARA REALIZAR EL PROYECTO ####
 from google.colab import drive
 drive.mount('/content/drive')
+```
 
+```python
 import numpy as np
 import pandas as pd
 import datetime as dt
 import seaborn as sns
 import warnings
 warnings.filterwarnings('ignore')
+```
+
+```python
+### IMPORTACION DE LA DATA ####
+redes = pd.read_csv("/content/drive/MyDrive/PYTHON-ANALISIS DE DATOS-DSRP/OSF_socialmedia_data.csv", index_col = 0)
+redes= redes.reset_index(drop = True)
+redes
 ```
 
 ### Limpieza de datos
