@@ -118,18 +118,18 @@ Los datos elegidos para realizar el análisis son las respuestas a una encuesta 
 
 Las variables de estudio a considerar son:
     1. Variables relacionadas al uso de redes sociales:
-        - [x] Uso activo de redes sociales – ASMU
-        - [x] Uso pasivo de redes sociales – PSMU
-        - [x] Consulta de noticias - News
+     - [x] Uso activo de redes sociales – ASMU
+     - [x] Uso pasivo de redes sociales – PSMU
+     - [x] Consulta de noticias - News
     2. Variables relacionadas a la depresión:
-        - [x]	Grado de estrés – Stress
-        - [x] Sentimiento de desesperanza – Hopeless
-        - [x] Sentimiento de inferioridad – Inferior
-        - [x] Pérdida de interés – LossOflnt
-        - [x]	Falta de concentración – Concentrat
-        - [x]	Sentimiento de soledad – Loneliness
-        - [x]	Sensación de fatiga – Fatigue
-        - [x]	Bajo estado de ánimo - LowMood
+     - [x]	Grado de estrés – Stress
+     - [x] Sentimiento de desesperanza – Hopeless
+     - [x] Sentimiento de inferioridad – Inferior
+     - [x] Pérdida de interés – LossOflnt
+     - [x]	Falta de concentración – Concentrat
+     - [x]	Sentimiento de soledad – Loneliness
+     - [x]	Sensación de fatiga – Fatigue
+     - [x]	Bajo estado de ánimo - LowMood
 
 
 ### Tipos de Variables que componen un data frame
