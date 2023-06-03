@@ -401,9 +401,55 @@ report_missings(redes_df3)
 <img id ="foto2" src="readme_img/fig_ 4.png" width="800px" height="800px" />
 </div>
 
+> *Se empieza a buscar duplicados para eliminarlos, ya que van a perjudicar a nuestro modelo*
+
+```python
+# Buscamos si hay duplicados dentro de las filas
+redes_unica = redes_df3.duplicated(keep='first')
+redes_df3[~redes_unica]
+```
+
+```python
+# Eliminamos las filas repetidas y la cantidad se reduce de 8631 a 8460.
+redes_df4 = redes_df3.drop_duplicates(keep='first').reset_index(drop=True)
+redes_df4
+```
+
 ### Análisis univariante
 
 #### Categórico
+
+```python
+# Se agrega la variable "IndDep" a las variables categóricas existentes
+var_total = var_categoricas.copy()
+var_total.append('IndDep')
+var_total
+```
+
+```python
+# Generar gráfica
+for var in var_total:
+  sns.set_style('whitegrid')
+  total = float(len(redes_df4[var_categoricas]))
+  plt.figure(figsize=(30,5))
+  ax = sns.countplot(x=var, data=redes_df4)
+  plt.xticks(size = 12)
+  if var == 'Day':
+    plt.xlabel('Días de la semana', fontsize=20)
+  elif var == target:
+    plt.xlabel('Indice de depresión', fontsize=20)
+  else:
+    plt.xlabel('Participantes', fontsize=20)
+    ax.set_xticklabels(ax.get_xticklabels(),rotation = 90)
+
+  for p in ax.patches:
+      percentage="{:.1f}%                   ".format(100 * p.get_height()/total)
+      x = p.get_x() + p.get_width()
+      y = p.get_height()
+      ax.annotate(percentage, (x, y),ha="right")
+  plt.show()
+```
+
 
 <div align="center"> 
   <img src="readme_img/fig_5.png" width="800px" height="300px">
@@ -411,11 +457,32 @@ report_missings(redes_df3)
 
 #### Numérico
 
+```python
+# Generar gráfica
+redes_df4.hist(figsize=(10,15))
+```
+
 <div align="center">
 <img id ="foto" src="readme_img/fig_6.png" width="800px" height="800px"/>
 </div>
+
+```python
+# Generar gráfica
+boxplot = redes_df4.boxplot(figsize=(20,5))
+```
+>*OJO: Ejecutar este código genera la primera gráfica de la Fig 3*
+
+```python
+#@title Variables propias de los participantes - indice de depresion
+dias=pd.concat([redes_df4['IndDep']],axis=1)
+fig,(ax)=plt.subplots(ncols=1,figsize=(40,5))
+pd.crosstab(redes_df4['Participant'],redes_df4['IndDep']).plot(kind='bar',linestyle='dashed',ax=ax, ylim=[0,20])
+```
+>*OJO: Ejecutar este código genera la segunda gráfica de la Fig 3*
+
 <div align="center">
 <img id ="foto" src="readme_img/fig_7.png" width="800px" height="300px"/>
+<p><i>Fig. 3</i></p>
 </div>
 
 ### Análisis multivariante
