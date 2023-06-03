@@ -100,7 +100,7 @@ Destaca su enfoque en el uso pasivo de las redes sociales, como lo es desplazars
 
 Su objetivo es proponer y evaluar una nueva metodología tomando como fundamento el análisis de emociones para calcular masivamente la presencia de indicios de suicidio en usuarios de Twiter, haciendo uso del modelo supervisado y no supervisado.
 
-### Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19(Estudio observacional)
+### Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19 *Estudio observacional*
 
 Basado en un método de búsqueda de expresiones regulares de usuarios identificados con depresión, creando un clasificado de texto psicológico consiguiendo, como se visualiza en “Fig. 2”, perfiles lingüísticos de los Tweets de usuarios depresivos y no depresivos.
 
