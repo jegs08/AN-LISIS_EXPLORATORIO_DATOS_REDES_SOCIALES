@@ -31,9 +31,9 @@ Pandas es la librería de software libre para manipulación de datos con Python 
   - [A. Usuarios de redes sociales](#Usuarios-de-redes-sociales)
   - [B. Transtornos depresivos](#Transtornos-depresivos)
 - [III. Trabajos relacionados](#Trabajos-relacionados)
-  - [A. Social Media and Depresion Symptoms: A Network Perspective](#Social-Media-and-Depresion-Symptoms-:-A-Network Perspective)
+  - [A. Social Media and Depresion Symptoms: A Network Perspective](#Social-Media-and-Depresion-Symptoms:-A-Network Perspective)
   - [B. Metodología de Análisis de Emociones para Identificar Riesgo de Cometer Suicidio Generado por el COVID-19](#Metodología-de-Análisis-de-Emociones-para-Identificar-Riesgo-de-Cometer-Suicidio-Generado-por-el-COVID-19)
-  - [C. Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19: Estudio observacional](#Monitoreo-de-las-tendencias-de-depresión-en-Twiter-durante-la-pandemia-de-COVID-19-:-Estudio-observacional)
+  - [C. Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19: Estudio observacional](#Monitoreo-de-las-tendencias-de-depresión-en-Twiter-durante-la-pandemia-de-COVID-19:-Estudio-observacional)
 - [IV. Propuesta de Data Product](#Propuesta-de-Data-Product)
   - [A. Set de datos]
   - [B. Modelamiento y/o análisis]
@@ -92,7 +92,7 @@ Entre los trastornos del estado de ánimo se encuentran los que se dan una sola 
 
 ## Trabajos relacionados
 
-### Social Media and Depresdion Symptoms: A Network Perspective
+### Social Media and Depresdion Symptoms:A Network Perspective
 
 Destaca su enfoque en el uso pasivo de las redes sociales, como lo es desplazarse por las noticias en las redes sociales, y cómo esto se relaciona con los síntomas de depresión.
 
@@ -100,7 +100,7 @@ Destaca su enfoque en el uso pasivo de las redes sociales, como lo es desplazars
 
 Su objetivo es proponer y evaluar una nueva metodología tomando como fundamento el análisis de emociones para calcular masivamente la presencia de indicios de suicidio en usuarios de Twiter, haciendo uso del modelo supervisado y no supervisado.
 
-### Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19: Estudio observacional
+### Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19:Estudio observacional
 
 Basado en un método de búsqueda de expresiones regulares de usuarios identificados con depresión, creando un clasificado de texto psicológico consiguiendo, como se visualiza en “Fig. 2”, perfiles lingüísticos de los Tweets de usuarios depresivos y no depresivos.
 
