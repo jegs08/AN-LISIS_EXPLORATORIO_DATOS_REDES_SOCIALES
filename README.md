@@ -191,6 +191,13 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 ### IMPORTACION DE LIBRERIAS NECESARIAS PARA REALIZAR EL PROYECTO ####
 from google.colab import drive
 drive.mount('/content/drive')
+
+import numpy as np
+import pandas as pd
+import datetime as dt
+import seaborn as sns
+import warnings
+warnings.filterwarnings('ignore')
 ```
 
 ### Limpieza de datos
