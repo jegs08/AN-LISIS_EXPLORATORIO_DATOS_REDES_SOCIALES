@@ -563,7 +563,50 @@ boxplot = redes_df5.boxplot(figsize=(20,5))
 
 ### Matriz de Correlación
 
+```python
+# Correlación de variables numéricas
+matriz_crr = redes_df5[var_numericas + ["IndDep"]].copy()
+matriz_crr = pd.get_dummies(matriz_crr, columns=["IndDep"], drop_first=False)
+matriz_crr.head()
+```
+
 #### Categórica
+
+```python
+# Correlación de variables categoricas
+matriz_cat = redes_df5[var_categoricas + ["IndDep"]].copy()
+matriz_cat.head()
+```
+
+```python
+#@title funciones categoricas
+from sklearn import preprocessing
+from scipy.stats import chi2_contingency
+def cramers_V(var1,var2):
+  crosstab = np.array(pd.crosstab(var1,var2, rownames=None, colnames=None)) 
+  chi2 = chi2_contingency(crosstab)[0]
+  n = np.sum(crosstab)
+  phi2 = chi2 / n
+  r, k = crosstab.shape
+  phi2corr = max(0, phi2 - ((k-1)*(r-1))/(n-1))
+  rcorr = r - ((r-1)**2)/(n-1) 
+  kcorr = k - ((k-1)**2)/(n-1)
+  return np.sqrt(phi2corr / min((kcorr-1), (rcorr-1)))
+rows = []
+for var1 in matriz_cat.columns:
+  col = []
+  for var2 in matriz_cat.columns:
+    cramer = cramers_V(matriz_cat[var1], matriz_cat[var2])
+    col.append(round(cramer, 2))
+  rows.append(col)
+
+plt.figure(figsize=(6,6))
+rows = np.array(rows)
+matr_corr = pd.DataFrame(rows, columns = matriz_cat.columns, index = matriz_cat.columns)
+mask = np.triu(np.ones_like(matr_corr, dtype = np.bool))
+sns.heatmap(matr_corr, mask = mask, cmap = "BrBG", annot = True, vmin = -1, vmax = 1)
+plt.show()
+```
 
 <div align="center"> 
   <img src="readme_img/fig_11.png" width="800px" height="600px">
@@ -571,17 +614,104 @@ boxplot = redes_df5.boxplot(figsize=(20,5))
 
 #### Numérica
 
+```python
+Correlación de variables numéricass
+plt.figure(figsize=(16,6))
+mask = np.triu(np.ones_like(matriz_crr.corr(), dtype = np.bool))
+sns.heatmap(round(matriz_crr.corr(), 2), mask = mask, cmap = "Spectral", annot = True, vmin = -1, vmax =1 )
+plt.show()
+```
+
 <div align="center"> 
   <img src="readme_img/fig_12.png" width="800px" height="400px">
 </div>
 
 ### Codificación de variables
 
+```python
+redes_df5
+
+redes_df6=redes_df5.copy()
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+encoder = LabelEncoder()
+# Encode labels in column
+for i in var_categoricas: 
+  redes_df6[i]= encoder.fit_transform(redes_df6[i]) 
+redes_df6
+# Codificar el target
+
+dic_cat = {
+    "No Deprimido":0, 
+    "Deprimido":1
+    }
+
+redes_df6[target] = redes_df6[target].map(dic_cat)
+redes_df6
+
+# redes_df6 = pd.get_dummies(redes_df6, columns=[target], drop_first=False)
+# redes_df6
+```
+
 <div align="center"> 
   <img src="readme_img/fig_13.png" width="800px" height="300px">
 </div>
 
+```python
+redes_df6.info()
+```
+
 ### Escalamiento de variables
+
+```python
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+
+redes_df7 = redes_df6.copy()
+data_sc = redes_df7.drop([target],axis = 1)
+data_nsc = redes_df7[target].reset_index(drop=True)
+```
+
+```python
+#@title seccion de funciones
+def scaler_data(data, scaler=0):
+  # data: el dataframe a escalar
+  # scaler: 0 (default) no aplicar nada
+  if scaler==0:
+    return data, np.nan    
+  if scaler==1:
+    sc = StandardScaler()
+  else:
+    sc = MinMaxScaler()
+  data_tr = sc.fit_transform(data)
+
+  return data_tr, sc
+```
+
+```python
+#@title Seleccionar método de escalamiento { run: "auto" }
+aplicar_todo = False #@param {type:"boolean"}
+dicc_scaler= {"No aplicar":0, "StandardScaler":1, "MinMaxScaler":2}
+method_scaler = "StandardScaler" #@param ["No aplicar", "StandardScaler", "MinMaxScaler"]
+```
+
+```python
+print(f"Scaler {method_scaler}:")
+redes_sc, sc = scaler_data(data_sc, dicc_scaler[method_scaler])
+sc
+```
+
+```python
+redes_sc_df=pd.DataFrame(redes_sc,columns=data_sc.columns.values)
+redes_sc_df
+```
+
+```python
+redes_sc_df = pd.concat([redes_sc_df, data_nsc], axis = 1, ignore_index = True)
+redes_sc_df.columns = redes_df6.columns.values
+redes_sc_df
+```
+> *El resultado de ejecutar este último código es la siguiente tabla*
 
 <div align="center"> 
   <img src="readme_img/fig_14.png" width="800px" height="300px">
