@@ -117,19 +117,19 @@ Se utilizará como insumo principal un set de datos listado en un archivo .csv e
 Los datos elegidos para realizar el análisis son las respuestas a una encuesta de tres preguntas basadas en el uso de las redes sociales ya sea pasiva o activamente, así como las consultas a noticias de carácter político o de interés público realizada por usuarios de redes sociales durante catorce días contestando siete veces al día.
 
 Las variables de estudio a considerar son:
-    ●	Variables relacionadas al uso de redes sociales:
-        [x] Uso activo de redes sociales – ASMU
-        [x] Uso pasivo de redes sociales – PSMU
-        [x] Consulta de noticias - News
-●	Variables relacionadas a la depresión:
-o	Grado de estrés – Stress
-o	Sentimiento de desesperanza – Hopeless
-o	Sentimiento de inferioridad – Inferior
-o	Pérdida de interés – LossOflnt
-o	Falta de concentración – Concentrat
-o	Sentimiento de soledad – Loneliness
-o	Sensación de fatiga – Fatigue
-o	Bajo estado de ánimo - LowMood
+    - Variables relacionadas al uso de redes sociales:
+        - [x] Uso activo de redes sociales – ASMU
+        - [x] Uso pasivo de redes sociales – PSMU
+        - [x] Consulta de noticias - News
+    - Variables relacionadas a la depresión:
+        - [x]	Grado de estrés – Stress
+        - [x] Sentimiento de desesperanza – Hopeless
+        - [x] Sentimiento de inferioridad – Inferior
+        - [x] Pérdida de interés – LossOflnt
+        - [x]	Falta de concentración – Concentrat
+        - [x]	Sentimiento de soledad – Loneliness
+        - [x]	Sensación de fatiga – Fatigue
+        - [x]	Bajo estado de ánimo - LowMood
 
 
 ### Tipos de Variables que componen un data frame
