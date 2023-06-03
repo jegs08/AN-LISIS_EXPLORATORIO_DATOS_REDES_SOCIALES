@@ -201,16 +201,16 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 #### Categórico
 
 <div align="center"> 
-  <img src="readme_img/fig_5.png" width="500px" height="500px">
+  <img src="readme_img/fig_5.png" width="1000px" height="500px">
 </div>
 
 #### Numérico
 
-<div>
+<div align="center">
 <img id ="foto" src="readme_img/fig_6.png" width="500px" height="500px"/>
 </div>
 <div>
-<img id ="foto" src="readme_img/fig_7.png" width="500px" height="500px"/>
+<img id ="foto" src="readme_img/fig_7.png" width="1000px" height="500px"/>
 </div>
 
 ### Tipos de Variables que componen un data frame
