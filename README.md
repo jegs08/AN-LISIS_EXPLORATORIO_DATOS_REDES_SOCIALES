@@ -35,8 +35,8 @@ Pandas es la librería de software libre para manipulación de datos con Python 
   - [B. Metodología de Análisis de Emociones para Identificar Riesgo de Cometer Suicidio Generado por el COVID-19](#Metodología-de-Análisis-de-Emociones-para-Identificar-Riesgo-de-Cometer-Suicidio-Generado-por-el-COVID-19)
   - [C. Monitoreo de las tendencias de depresión en Twiter durante la pandemia de COVID-19: Estudio observacional](#Monitoreo-de-las-tendencias-de-depresión-en-Twiter-durante-la-pandemia-de-COVID-19-Estudio-observacional)
 - [IV. Propuesta de Data Product](#Propuesta-de-Data-Product)
-  - [A. Set de datos]
-  - [B. Modelamiento y/o análisis]
+  - [A. Set de datos](#Set-de-datos)
+  - [B. Modelamiento y/o análisis](#Modelamiento-y/o-análisis)
 - [V. Beneficios](#Beneficios)
 - [VI. Plan de proyecto](#Plan-de-proyecto)
 - [VII. Análisis de datos](#Análisis-de-datos)
@@ -112,11 +112,14 @@ Basado en un método de búsqueda de expresiones regulares de usuarios identific
 ## Propuesta de Data Product
 
 Se utilizará como insumo principal un set de datos listado en un archivo .csv en el repositorio de GitHub con la intención de utilizarla académicamente.
+
 ### Set de datos
 
 Los datos elegidos para realizar el análisis son las respuestas a una encuesta de tres preguntas basadas en el uso de las redes sociales ya sea pasiva o activamente, así como las consultas a noticias de carácter político o de interés público realizada por usuarios de redes sociales durante catorce días contestando siete veces al día.
 
+
 Las variables de estudio a considerar son:
+```sh
 1. Variables relacionadas al uso de redes sociales:
  - [x] Uso activo de redes sociales – ASMU
  - [x] Uso pasivo de redes sociales – PSMU
@@ -130,7 +133,15 @@ Las variables de estudio a considerar son:
  - [x]	Sentimiento de soledad – Loneliness
  - [x]	Sensación de fatiga – Fatigue
  - [x]	Bajo estado de ánimo - LowMood
+```
+### Modelamiento y/o análisis
 
+Teniendo en consideración las variables (numéricas) de estudio anteriormente mencionadas, se elabora un tipo de algoritmo supervisado, usando un modelo de clasificación, puesto a que finalmente se trabaja con una variable categórica.
+
+Para la variable categórica se realiza el uso de la siguiente fórmula:
+```sh
+DeprRate = -0,025 + 0,31 Loneliness + 0,25 Inferior + 0,19 Concentrat + 0,15 Stress + 0,06 Fatigue
+```
 
 ### Tipos de Variables que componen un data frame
 
