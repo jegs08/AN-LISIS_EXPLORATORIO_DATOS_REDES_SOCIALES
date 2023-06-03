@@ -192,7 +192,7 @@ Respecto a los recursos y perfiles, para este proyecto se necesitará los siguie
 from google.colab import drive
 drive.mount('/content/drive')
 ```
-> OJO: Antes de ejecutar o luego de la ejecución del código de conexión entre Google Colab y el Drive personal, se tiene que importar dentro del Drive personal el archivo **"OSF_socialmedia_data.csv"** con el que se va trabajar, ubicado en la raíz de este respositorio.
+> *OJO: Antes de ejecutar o luego de la ejecución del código de conexión entre Google Colab y el Drive personal, se tiene que importar dentro del Drive personal el archivo **"OSF_socialmedia_data.csv"** con el que se va trabajar, ubicado en la raíz de este respositorio.*
 
 ```python
 import numpy as np
