@@ -47,13 +47,13 @@ Pandas es la librería de software libre para manipulación de datos con Python 
   - [C. Análisis multivariante](#Análisis-multivariante)
   - [D. Eliminación de Outliers](#Eliminación-de-Outliers)
   - [E. Matriz de Correlación](#Matriz-de-Correlación)
-    - [Categórica]
-    - [Numérica]
-  - [F. Codificación de variables]
-  - [G. Escalamiento de variables]
-  - [H. Experimentación]
-    - [Sin balanceo]
-    - [Con balanceo]
+    - [Categórica](#Categórica)
+    - [Numérica](#Numérica)
+  - [F. Codificación de variables](Codificación-de-variables)
+  - [G. Escalamiento de variables](#Escalamiento-de-variables)
+  - [H. Experimentación](#Experimentación)
+    - [Sin balanceo](#Sin-balanceo)
+    - [Con balanceo](#Con-balanceo)
 - [VIII. Referencias](#Referencias)
 
 ## Resumen
